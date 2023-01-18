@@ -17,5 +17,17 @@ void main() {
 
     //查找含有'Sign up'文本 => 将会查找到很多
     expect(find.text('Sign up'), findsWidgets);
+
+    //查找含有'Welcome!'文本 => findsNothing
+    expect(find.text('Welcome!'), findsNothing);
+
+    // // Tap the Sign up button.
+    // await tester.tap(find.byType(TextButton));
+
+    // // Rebuild the widget after the state has changed.
+    // await tester.pump();
+    // var f = find.text('Sign up');
+    // //查找含有'Welcome!'文本 => findsNothing
+    // expect(f, findsWidgets);
   });
 }
